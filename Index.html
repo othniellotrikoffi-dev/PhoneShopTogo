@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhoneShop Togo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="icon">📱</span>
+      <span class="brand">PhoneShop <strong>Togo</strong></span>
+    </div>
+    <nav>
+      <button onclick="toggleCart()">Panier (<span id="cart-count">0</span>)</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>📱 Bienvenue chez PhoneShop Togo</h2>
+    <p>Explorez notre sélection des meilleurs smartphones à des prix imbattables. Paiement sécurisé via TMoney ou Flooz, livraison rapide partout au Togo.</p>
+    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80" alt="Téléphones en vitrine" />
+  </section>
+
+  <main class="product-grid" id="product-grid"></main>
+
+  <section class="payment-section">
+    <h3>💳 Paiement TMoney / Flooz</h3>
+    <form id="payment-form">
+      <input type="text" placeholder="Nom complet" required />
+      <input type="email" placeholder="Email" required />
+      <input type="tel" placeholder="Numéro de téléphone" required />
+      <select required>
+        <option value="">Choisir un mode de paiement</option>
+        <option value="tmoney">TMoney</option>
+        <option value="flooz">Flooz</option>
+      </select>
+      <button type="submit">Payer maintenant</button>
+    </form>
+    <p id="payment-confirmation" class="hidden">✅ Paiement simulé avec succès ! Merci pour votre commande.</p>
+  </section>
+
+  <section class="about">
+    <h3>📘 À propos</h3>
+    <p>PhoneShop Togo est une initiative locale visant à rendre la technologie mobile accessible à tous. Nous sélectionnons les meilleurs modèles pour répondre aux besoins de nos clients, avec un service simple, rapide et fiable.</p>
+  </section>
+
+  <aside id="cart" class="hidden">
+    <h3>Articles sélectionnés</h3>
+    <ul id="cart-items"></ul>
+    <button onclick="clearCart()">Vider le panier</button>
+  </aside>
+
+  <footer>
+    <p>&copy; 2025 PhoneShop Togo – Tous droits réservés</p>
+    <p>📧 Contact : info@phoneshoptogo.tg | 📍 Kohe, Région Maritime</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
